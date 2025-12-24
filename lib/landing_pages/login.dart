@@ -55,9 +55,9 @@ class _AlphaLoginScreenState extends State<AlphaLoginScreen> {
 
   void validateAadhar(String value) {
     if (value.isEmpty) {
-      aadharError = "Enter Aadhaar number";
+      aadharError = "Enter Aadhaar Number";
     } else if (!RegExp(r'^[0-9]+$').hasMatch(value)) {
-      aadharError = "Only numbers allowed";
+      aadharError = "Only Numbers allowed";
     } else if (value.length != 12) {
       aadharError = "Aadhaar must be 12 digits";
     } else {
@@ -67,13 +67,13 @@ class _AlphaLoginScreenState extends State<AlphaLoginScreen> {
 
   void validateMobile(String value) {
     if (value.isEmpty) {
-      mobileError = "Enter Mobile number";
+      mobileError = "Enter Mobile Number";
     } else if (!RegExp(r'^[0-9]+$').hasMatch(value)) {
-      mobileError = "Only numbers allowed";
+      mobileError = "Only Numbers allowed";
     } else if (value.length != 10) {
       mobileError = "Mobile must be 10 digits";
     } else if (!RegExp(r'^[5-9]').hasMatch(value)) {
-      mobileError = "Mobile number must start with 5, 6, 7, 8 or 9";
+      mobileError = "Mobile Number must start with 5, 6, 7, 8 or 9";
     } else {
       mobileError = null;
     }
@@ -168,7 +168,7 @@ class _AlphaLoginScreenState extends State<AlphaLoginScreen> {
                           controller: aadharController,
                           textAlign: TextAlign.center,
                           maxLength: 12,
-                          keyboardType: TextInputType.number,
+                          keyboardType: TextInputType.Number,
                           inputFormatters: [
                             FilteringTextInputFormatter.digitsOnly,
                             LengthLimitingTextInputFormatter(12),
